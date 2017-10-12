@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Devolver Libro {% endblock %}
+
+{% block contenido %}
+<script>
+
+  $(function() {
+  	
+    $( "#id_Salida" ).datepicker();
+    $( "#id_Entrega" ).datepicker();
+      });
+  </script>
+	<section class="inner cover">
+		<ul>
+			<h1 class="cover-heading">Devolver Libro</h1></br>
+			<form id="Registro" method="post" class="lead">{% csrf_token %}
+		<ul>
+			{{devolucion.as_p}}
+
+			<p ><input type="submit" value="Confirmar" class="btn btn-lg btn-default"></p>
+		</ul>
+	
+	</form>
+		</ul>
+	</section>
+{% endblock %}

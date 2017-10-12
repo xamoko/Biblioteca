@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Pagina Principal {% endblock %}
+
+{% block contenido %} 
+	<section class="inner cover">
+		<ul>
+			<h1 class="cover-heading">Catalogo</h1></br>
+			<form id="Registro" method="post" class="lead">{% csrf_token %}
+		<ul>
+		<script>
+  $(function() {
+    $( "#id_Fecha_de_Salida").datepicker();
+    $( "#id_Entrega").datepicker();
+  });
+  </script>
+			{{registro.as_p}}
+			
+
+			<p ><input type="submit" value="Confirmar" class="btn btn-lg btn-default"></p>
+		</ul>
+	
+	</form>
+		</ul>
+	</section>
+	
+ {% endblock %}

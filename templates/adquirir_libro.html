@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Adquirir Libro{% endblock %}
+
+{% block contenido %}
+	<section class="inner cover">
+		<ul>
+			<h1 class="cover-heading">Adquirir Libro</h1></br>
+			<form id="Registro" method="post" class="lead">{% csrf_token %}
+		<ul>
+			{{formulario.as_p}}
+
+		</ul>
+	
+	</form>
+		</ul>
+	</section>
+{% endblock %}
